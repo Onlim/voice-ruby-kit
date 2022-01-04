@@ -3,7 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = "voice_ruby_kit"
+  spec.name          = "voice-ruby-kit"
   spec.version       = "1.0"
   spec.authors       = ["Richard Dvorsky"]
   spec.email         = ["richard.dvorsky@onlim.com"]
