@@ -1,2 +1,3 @@
-# voice-ruby-kit
-Repository which handles voice assistants in ruby
+# VoiceRubyKit
+
+This gem implements a quick back-end service for deploying applications for Alexa and Google Assistant.
