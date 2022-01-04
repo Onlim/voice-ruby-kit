@@ -1,15 +1,23 @@
 module VoiceRubyKit
   module Base
     class Request
+      require 'base/api'
+      require 'base/channel'
+      require 'base/geolocation'
+      require 'base/interface'
+      require 'base/scope'
+      require 'base/session'
+      require 'base/slot'
+
       attr_reader  :uid, :type, :name, :json, :locale, :conversation_id, :session,
                    :scope, :interface, :api, :geolocation, :crawler
 
       def initialize(channel, json_request, action_uid = nil)
         @uid = channel.action_skill_uid(json_request, action_uid)
-        raise ArgumentError, 'Action/Skill uid should exist in all requests' if @uid.nil?
+        raise ArgumentError, "Action/Skill uid should exist in all requests" if @uid.nil?
 
-        @type            = 'DEFAULT_TYPE'
-        @name            = 'DEFAULT_NAME'
+        @type            = "DEFAULT_TYPE"
+        @name            = "DEFAULT_NAME"
         @json            = json_request
         @channel         = channel
         @locale          = channel.locale(json_request)

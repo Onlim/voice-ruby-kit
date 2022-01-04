@@ -1,3 +1,5 @@
+require 'base/request'
+
 module VoiceRubyKit
   module Requests
     class IntentRequest < VoiceRubyKit::Base::Request

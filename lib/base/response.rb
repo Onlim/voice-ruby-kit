@@ -1,7 +1,7 @@
 module VoiceRubyKit
   module Base
     class Response
-      class SlotNotFound < StandardError; end
+      require "errors/slot_not_found_error"
 
       def initialize(channel, request)
         @channel = channel
@@ -81,7 +81,7 @@ module VoiceRubyKit
       end
 
       def modify_slot(name, value, confirmation_status)
-        raise SlotNotFound if @intents['slots'][name].nil?
+        raise SlotNotFoundError if @intents['slots'][name].nil?
 
         @intents['slots'][name]['value'] = value
         @intents['slots'][name]['confirmationStatus'] = confirmation_status

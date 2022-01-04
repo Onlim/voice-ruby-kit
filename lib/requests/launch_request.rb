@@ -1,3 +1,5 @@
+require 'requests/intent_request'
+
 module VoiceRubyKit
   module Requests
     class LaunchRequest < IntentRequest

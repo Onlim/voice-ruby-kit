@@ -3,6 +3,16 @@
 module VoiceRubyKit
   module Base
     class Handler
+      require 'errors/unsupported_platform_error'
+      require 'errors/invalid_request_error'
+      require 'channels/alexa'
+      require 'channels/assistant'
+      require 'requests/launch_request'
+      require 'requests/intent_request'
+      require 'requests/option_request'
+      require 'requests/session_ended_request'
+      require 'base/response'
+
       PLATFORMS = %w[alexa assistant].freeze
 
       PLATFORMS.each do |platform|
@@ -41,7 +51,7 @@ module VoiceRubyKit
       end
 
       def response(request_object)
-        VoiceRubyKit::Base::Response.new(@channel, request_object)
+        Base::Response.new(@channel, request_object)
       end
     end
   end

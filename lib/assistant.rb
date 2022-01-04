@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'base/handler'
 
 module VoiceRubyKit
   class Assistant < Base::Handler

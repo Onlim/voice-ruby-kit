@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+
+require 'base/channel'
+
 module VoiceRubyKit
   module Channels
     class Assistant < Base::Channel

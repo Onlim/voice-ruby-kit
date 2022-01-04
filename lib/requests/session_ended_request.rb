@@ -1,3 +1,5 @@
+require 'base/request'
+
 module VoiceRubyKit
   module Requests
     class SessionEndedRequest < VoiceRubyKit::Base::Request
