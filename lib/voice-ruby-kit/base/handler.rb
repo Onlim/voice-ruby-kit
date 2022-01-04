@@ -3,15 +3,15 @@
 module VoiceRubyKit
   module Base
     class Handler
-      require 'errors/unsupported_platform_error'
-      require 'errors/invalid_request_error'
-      require 'channels/alexa'
-      require 'channels/assistant'
-      require 'requests/launch_request'
-      require 'requests/intent_request'
-      require 'requests/option_request'
-      require 'requests/session_ended_request'
-      require 'base/response'
+      require 'voice-ruby-kit/errors/unsupported_platform_error'
+      require 'voice-ruby-kit/errors/invalid_request_error'
+      require 'voice-ruby-kit/channels/alexa'
+      require 'voice-ruby-kit/channels/assistant'
+      require 'voice-ruby-kit/requests/launch_request'
+      require 'voice-ruby-kit/requests/intent_request'
+      require 'voice-ruby-kit/requests/option_request'
+      require 'voice-ruby-kit/requests/session_ended_request'
+      require 'voice-ruby-kit/base/response'
 
       PLATFORMS = %w[alexa assistant].freeze
 

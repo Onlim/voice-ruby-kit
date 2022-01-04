@@ -1,7 +1,7 @@
 module VoiceRubyKit
   module Base
     class Response
-      require "errors/slot_not_found_error"
+      require "voice-ruby-kit/errors/slot_not_found_error"
 
       def initialize(channel, request)
         @channel = channel

@@ -1,4 +1,4 @@
-require 'base/request'
+require 'voice-ruby-kit/base/request'
 
 module VoiceRubyKit
   module Requests

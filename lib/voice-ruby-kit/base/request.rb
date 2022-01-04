@@ -1,13 +1,13 @@
 module VoiceRubyKit
   module Base
     class Request
-      require 'base/api'
-      require 'base/channel'
-      require 'base/geolocation'
-      require 'base/interface'
-      require 'base/scope'
-      require 'base/session'
-      require 'base/slot'
+      require 'voice-ruby-kit/base/api'
+      require 'voice-ruby-kit/base/channel'
+      require 'voice-ruby-kit/base/geolocation'
+      require 'voice-ruby-kit/base/interface'
+      require 'voice-ruby-kit/base/scope'
+      require 'voice-ruby-kit/base/session'
+      require 'voice-ruby-kit/base/slot'
 
       attr_reader  :uid, :type, :name, :json, :locale, :conversation_id, :session,
                    :scope, :interface, :api, :geolocation, :crawler

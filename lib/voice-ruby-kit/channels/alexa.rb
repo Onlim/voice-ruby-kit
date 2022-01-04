@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'base/channel'
+require 'voice-ruby-kit/base/channel'
 
 module VoiceRubyKit
   module Channels
     class Alexa < Base::Channel
-      require 'channels/helpers/apl'
-      require 'channels/helpers/dialog'
+      require 'voice-ruby-kit/channels/helpers/apl'
+      require 'voice-ruby-kit/channels/helpers/dialog'
 
       def initialize
         super

@@ -1,4 +1,4 @@
-require 'requests/intent_request'
+require 'voice-ruby-kit/requests/intent_request'
 
 module VoiceRubyKit
   module Requests

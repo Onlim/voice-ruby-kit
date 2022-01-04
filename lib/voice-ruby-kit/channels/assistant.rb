@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'base/channel'
+require 'voice-ruby-kit/base/channel'
 
 module VoiceRubyKit
   module Channels
