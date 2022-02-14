@@ -3,7 +3,7 @@ module VoiceRubyKit
     class Channel
 
       def initialize
-        @version = "1.0"
+        @version = '1.0'
       end
 
       def crawler?(json_request)
@@ -142,7 +142,7 @@ module VoiceRubyKit
         {}
       end
 
-      def add_audio_url(url, token = "", offset = 0)
+      def add_audio_url(url, token = '', offset = 0)
         {}
       end
 
@@ -175,8 +175,10 @@ module VoiceRubyKit
       end
 
       def check_ssml(ssml_string)
-        ssml_string = ssml_string.gsub(%r{</?speak>}, "")
+        ssml_string = ssml_string.gsub(%r{</?speak>}, '')
         ssml_string.delete!("\n")
+        ssml_string.delete!('<br>')
+        ssml_string.delete!('<br/>')
         ssml_string = "<speak>#{ssml_string}</speak>"
         ssml_string.squish
       end
