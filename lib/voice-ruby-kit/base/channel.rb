@@ -175,9 +175,10 @@ module VoiceRubyKit
       end
 
       def check_ssml(ssml_string)
+        ssml_string.delete!("\n")
         ssml_string = ssml_string.gsub(%r{</?speak>}, '')
         ssml_string = ssml_string.gsub(%r{<br\s*/?>}, '')
-        ssml_string.delete!("\n")
+        ssml_string = ssml_string.gsub('&', '&amp;')
         ssml_string = "<speak>#{ssml_string}</speak>"
         ssml_string.squish
       end
